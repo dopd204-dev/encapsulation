@@ -4,7 +4,7 @@ class Student {
     private String name;
     private String surname;
     private int age;
-    private String[] courses;   // List ордуна массив
+    private String[] courses;  
 
     public String getName() {
         return name;
