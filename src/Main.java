@@ -17,14 +17,15 @@ public class Main {
         student.setAge(scanner.nextInt());
         scanner.nextLine();
 
-        List<String> courses = new ArrayList<>();
         System.out.print("Канча курс окуйсуз? ");
         int courseCount = scanner.nextInt();
         scanner.nextLine();
 
+        String[] courses = new String[courseCount];
+
         for (int i = 0; i < courseCount; i++) {
             System.out.print((i + 1) + "-курс: ");
-            courses.add(scanner.nextLine());
+            courses[i] = scanner.nextLine();
         }
 
         student.setCourses(courses);
@@ -34,6 +35,7 @@ public class Main {
         System.out.println("Фамилиясы: " + student.getSurname());
         System.out.println("Жашы: " + student.getAge());
         System.out.println("Курстары:");
+
         for (String course : student.getCourses()) {
             System.out.println("- " + course);
         }

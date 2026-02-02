@@ -4,9 +4,8 @@ class Student {
     private String name;
     private String surname;
     private int age;
-    private List<String> courses;
+    private String[] courses;   // List ордуна массив
 
-    // Getter жана Setterлер
     public String getName() {
         return name;
     }
@@ -31,15 +30,14 @@ class Student {
         this.age = age;
     }
 
-    public List<String> getCourses() {
+    public String[] getCourses() {
         return courses;
     }
 
-    public void setCourses(List<String> courses) {
+    public void setCourses(String[] courses) {
         this.courses = courses;
     }
 }
-
 
 
 
