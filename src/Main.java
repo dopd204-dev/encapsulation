@@ -3,43 +3,20 @@
 public class Main {
 }
     public static void main(String[] args) {
+        Car myCar = new Car("Toyota", "Corolla", 2020, 50);
 
-        Scanner scanner = new Scanner(System.in);
-        Student student = new Student();
+        System.out.println("Brand: " + myCar.getBrand());
+        System.out.println("Model: " + myCar.getModel());
+        System.out.println("Year: " + myCar.getYear());
+        System.out.println("Speed: " + myCar.getSpeed());
 
-        System.out.print("Атыңызды жазыңыз: ");
-        student.setName(scanner.nextLine());
 
-        System.out.print("Фамилияңызды жазыңыз: ");
-        student.setSurname(scanner.nextLine());
-
-        System.out.print("Жашыңызды жазыңыз: ");
-        student.setAge(scanner.nextInt());
-        scanner.nextLine();
-
-        System.out.print("Канча курс окуйсуз? ");
-        int courseCount = scanner.nextInt();
-        scanner.nextLine();
-
-        String[] courses = new String[courseCount];
-
-        for (int i = 0; i < courseCount; i++) {
-            System.out.print((i + 1) + "-курс: ");
-            courses[i] = scanner.nextLine();
-        }
-
-        student.setCourses(courses);
-
-        System.out.println("\n--- Студенттин маалыматы ---");
-        System.out.println("Аты: " + student.getName());
-        System.out.println("Фамилиясы: " + student.getSurname());
-        System.out.println("Жашы: " + student.getAge());
-        System.out.println("Курстары:");
-
-        for (String course : student.getCourses()) {
-            System.out.println("- " + course);
-        }
+        myCar.increaseSpeed(20);
+        System.out.println("Increased Speed: " + myCar.getSpeed());
+        myCar.decreaseSpeed(40);
+        System.out.println("Decreased Speed: " + myCar.getSpeed());
     }
+
 
 
 
