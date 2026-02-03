@@ -3,15 +3,17 @@
 public class Main {
 }
     public static void main(String[] args) {
-        House house = new House(
-                "Бишкек ш., Манас проспекти",
-                4,
-                120.5
-        );
+        Shop shop = new Shop("Shop", 10);
 
-        double price = house.calculatePrice(10000);
-        System.out.println("Үйдүн баасы: " + price);
+        System.out.println("---------------Меню------------");
+        shop.addProduct(new Product("Apple", 50));
+        shop.addProduct(new Product("Banana", 30));
+        shop.addProduct(new Product("Orange", 40));
+        shop.printProducts();
+        System.out.println("--------------------------------");
     }
+
+
 
 
 
